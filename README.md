@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# courses-dashboard
+A courses dashboard app built with React and Firebase that lets users view course listings and add courses to their dashboard. Utilizes Material-UI for a sleek, responsive interface.
+>>>>>>> 16221f4b104816dd84423cfb98a4443ff9c8f29c
