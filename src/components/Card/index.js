@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography, styled } from '@mui/material';
 import React from 'react';
 import CourseDetailsModal from './CourseDetailsModal';
+import TopicsTypography from '../Atoms/Topics';
 
 const DescTypography = styled(Typography)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -12,19 +13,8 @@ const DescTypography = styled(Typography)(({ theme }) => ({
     fontWeight: 600
 }));
 
-const TopicsTypography = styled(Grid)(({ theme }) => ({
-    backgroundColor: 'grey',
-    padding: theme.spacing(0.95),
-    borderRadius: theme.shape.borderRadius,
-    color: theme.palette.secondary.contrastText,
-    display: 'inline-block',
-    fontSize: '13.5px',
-    fontWeight: 600,
-    margin: '5px'
-}));
-
 const Index = (props) => {
-    const { courseName, courseTopics, courseDuration, courseType, courseMode } = props;
+    const { courseName, courseTopics, courseDuration, courseType, courseMode, courseDesc } = props;
     const [open, setOpen] = React.useState(false);
 
     const handleClickOpen = () => {
@@ -84,7 +74,8 @@ const Index = (props) => {
                 courseMode={courseMode} 
                 courseType={courseType} 
                 courseDuration={courseDuration} 
-                courseTopics={courseTopics} 
+                courseTopics={courseTopics}
+                courseDesc ={courseDesc}
             />
         </Box>
     );

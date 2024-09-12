@@ -1,27 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Dialog, DialogActions, DialogContent, DialogTitle, Button, Grid, FilledInput, Select, MenuItem, styled, Typography, IconButton } from '@mui/material';
+import { Box, Dialog, DialogActions, DialogContent, DialogTitle, Button, Grid, FilledInput, Select, MenuItem, Typography, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import SaveIcon from '@mui/icons-material/Upload';
 import ClearIcon from '@mui/icons-material/Clear';
 import { collection, addDoc } from 'firebase/firestore';
 import { firestore } from '../../firebase/config'; 
-
-const TopicsTypography = styled(Grid)(({ theme }) => ({
-    border: `1px solid ${theme.palette.secondary.main}`,
-    padding: theme.spacing(0.95),
-    borderRadius: theme.shape.borderRadius,
-    color: theme.palette.secondary.main,
-    display: 'inline-block',
-    fontSize: '13.5px',
-    fontWeight: 600,
-    margin: '5px',
-    cursor: 'pointer',
-    "&:hover": {
-        backgroundColor: theme.palette.secondary.main,
-        color: '#fff',
-    }
-}));
-
+import TopicsTypography from '../Atoms/Topics';
 const initialCourseDetails = {
     courseName: "",
     courseDesc: "",
@@ -199,7 +183,12 @@ const Modal = ({ isOpen, onClose }) => {
                     </Grid>
                     <Grid item xs={12}>
                         {coursesDetails.courseTopics.map((topic, index) => (
-                            <TopicsTypography key={index} item>
+                            <TopicsTypography key={index} item 
+                            // "&:hover": {
+                            //         backgroundColor: theme.palette.secondary.main,
+                            //         color: '#fff',
+                            //     }
+                                >
                                 {topic}                                    
                                 <IconButton
                                     onClick={() => handleDeleteTopic(topic)}
